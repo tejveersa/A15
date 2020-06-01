@@ -1,5 +1,5 @@
 :root {
-  --body-width: 800px;
+	--body-width: 99%;
 }
 
 * {
@@ -23,6 +23,7 @@ body {
   font-size: 100%;
 
 	width: var(--body-width);
+	max-width: 960px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	margin-left: auto;
@@ -60,8 +61,8 @@ header h3 {
 }
 
 header img {
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 3.125%;
+	padding-right: 3.125%;
 	float: left;
 }
 
@@ -76,10 +77,10 @@ main {
 }
 
 section {
-	width: 525px;
+	width: 54.6875%; /* 525/960 *100 */
 	float: right;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-right: 2.083333%;
+	padding-left: 2.083333%;
 	padding-bottom: 20px;
 }
 
@@ -119,6 +120,8 @@ section h1 {
 }
 
 section img {
+	min-width: 150px;
+	max-width: 40%;
 	float: right;
 	margin-right: 20px;
 	margin-top: 20px;
@@ -149,9 +152,9 @@ article h3 {
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 22.395833%; /* 215/960 * 100 */
 	float: right;
-	padding-left: 20px;
+	padding-left: 2.083333%;
 	padding-bottom: 20px;
 }
 
@@ -274,6 +277,8 @@ ul.nav_menu li:before {
 ul.nav_menu li {
 	position: relative;
 	float: left;
+	width: 20%;
+	/*calc((var(--body-width)/5)/(var(--body-width))*100)%; */
 }
 
 /* #8 */
@@ -281,7 +286,6 @@ ul.nav_menu li {
 ul.nav_menu li a {
 	position: relative;
 	display: block;
-  width: calc(var(--body-width)/5);
   height: 20px;
 	text-align: center;
   padding-top: 1em;
@@ -334,4 +338,63 @@ ul.nav_menu li > ul::after
 		content "";
 		clear: both;
 		display: block;
+}
+
+.mobile_menu {
+	display: none;
+}
+
+
+@media only screen and (max-width: 959px) {
+	section h1{
+		font-size: 135%;
+	}
+	section h2{
+		font-size: 120%;
+	}
+	aside h2{
+		font-size: 120%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	header img{
+		float: none;
+		clear: both;
+	}
+	section{
+		float: none;
+		padding-right: padding-left;
+		width: (100-(padding-right)-(padding-left))%;
+	}
+	aside{
+		float: none;
+		padding-right: padding-left;
+		width: (100-(padding-right)-(padding-left))%;
+	}
+	section img{
+		max-width: 30%;
+	}
+	div{
+		 -moz-column-count: 2;
+		 -webkit-column-count: 2;
+		 column-count: 2;
+	}
+	.nav_menu{
+		display: none;
+	}
+	.mobile_menu {
+	display: block;
+	background-color: #800000;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	body{
+		font-size: 90%;
+	}
+	.mobile_menu {
+	display: block;
+	background-color: #800000;
+	}
 }

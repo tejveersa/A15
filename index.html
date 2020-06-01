@@ -3,10 +3,20 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function()
+			{
+				$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+			});
+  </script>
 </head>
 
 <body>
@@ -16,6 +26,7 @@
 		<h3>Celebrating our <em class="shadow">75<sup>th</sup></em> Year</h3>
 	</header>
 
+<nav id="mobile_menu"></nav>
 	<ul id=“nav_menu” class="nav_menu">
 		<li><a class="current" href="index.html">Home</a></li>
 		<li><a href="speakers.html">Speakers</a></li>
@@ -30,6 +41,7 @@
 			</ul>
 		</li>
 	</ul>
+
 
 
 	<main>
@@ -60,14 +72,16 @@
 
 		<aside>
 			<h2>Guest speakers</h2>
-			<h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
-			<img src="images/toobin75.jpg" alt="Jeffrey Toobin" width="75" height="75">
-			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
-			<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin" width="75" height="75">
-			<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
-			<img src="images/chua75.jpg" alt="Amy Chua" width="75" height="75">
-			<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
-			<img src="images/sampson75.jpg" alt="Scott Sampson" width="75" height="75">
+			<div>
+				<h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
+				<img src="images/toobin75.jpg" alt="Jeffrey Toobin" width="75" height="75">
+				<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
+				<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin" width="75" height="75">
+				<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
+				<img src="images/chua75.jpg" alt="Amy Chua" width="75" height="75">
+				<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
+				<img src="images/sampson75.jpg" alt="Scott Sampson" width="75" height="75">
+			</div>
 		</aside>
 	</main>
 

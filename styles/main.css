@@ -340,7 +340,7 @@ ul.nav_menu li > ul::after
 		display: block;
 }
 
-.mobile_menu {
+#mobile_menu {
 	display: none;
 }
 
@@ -383,7 +383,7 @@ ul.nav_menu li > ul::after
 	.nav_menu{
 		display: none;
 	}
-	.mobile_menu {
+	#mobile_menu {
 	display: block;
 	background-color: #800000;
 	}
@@ -393,7 +393,7 @@ ul.nav_menu li > ul::after
 	body{
 		font-size: 90%;
 	}
-	.mobile_menu {
+	#mobile_menu {
 	display: block;
 	background-color: #800000;
 	}
